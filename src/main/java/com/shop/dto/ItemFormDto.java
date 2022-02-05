@@ -31,6 +31,8 @@ public class ItemFormDto {
 
     private ItemSellStatus itemSellStatus;
 
+    private List<Long> itemImgIds = new ArrayList<>();
+
     private List<ItemImgDto> itemImgDtoList = new ArrayList<>();
 
     private static ModelMapper modelMapper = new ModelMapper();
@@ -43,4 +45,11 @@ public class ItemFormDto {
         return modelMapper.map(item, ItemFormDto.class);
     }
 
+    public void setItemImgIds(List<Long> itemImgIds) {
+        this.itemImgIds = itemImgIds;
+    }
+
+    public List<Long> getItemImgIds() {
+        return itemImgIds;
+    }
 }
